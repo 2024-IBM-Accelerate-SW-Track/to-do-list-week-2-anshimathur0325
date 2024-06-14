@@ -6,7 +6,10 @@ class AddTodo extends Component {
   constructor() {
     super();
     this.state = {
+      precondition: "",
       content: "",
+      postcondition: "",
+      date: ""
     };
   }
   // The handleChange function updates the react state with the new input value provided from the user.
@@ -15,6 +18,17 @@ class AddTodo extends Component {
   handleChange = (event) => {
     this.setState({
       content: event.target.value,
+      date: Date().toLocaleString('en-US')
+    });
+  };
+  handlePreChange = (event) => {
+    this.setState({
+      precondition: event.target.value,
+    });
+  };
+  handlePostChange = (event) => {
+    this.setState({
+      postcondition: event.target.value,
     });
   };
   // The handleSubmit function collects the forms input and puts it into the react state.
@@ -26,7 +40,10 @@ class AddTodo extends Component {
     if (this.state.content.trim()) {
       this.props.addTodo(this.state);
       this.setState({
+        precondition: "",
         content: "",
+        postcondition: "",
+        date: ""
       });
     }
   };
@@ -41,11 +58,23 @@ class AddTodo extends Component {
       // 4. The value of the text field also should reflect the local state of this component.
       <div>
         <TextField
-          label="Add New Item"
+          label="Add New Precondition"
+          variant="outlined"
+          onChange={this.handlePreChange}
+          value={this.state.precondition}
+        />
+        <TextField
+          label="Add New Content"
           variant="outlined"
           onChange={this.handleChange}
           value={this.state.content}
           data-testid="new-item-textfield"
+        />
+        <TextField
+          label="Add New Postcondition"
+          variant="outlined"
+          onChange={this.handlePostChange}
+          value={this.state.postcondition}
         />
         <Button
           style={{ marginLeft: "10px" }}
