@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Todos from "../component/todos";
 import AddTodo from "../component/AddTodo";
 import "../pages/Home.css";
+import RandomThing from '../component/RandomThing';
 
 class Home extends Component {
   // Create a default state of this component with an empty list of todos.
@@ -43,6 +44,7 @@ class Home extends Component {
   render() {
     return (
       <div className="Home">
+        <div className="Box">
         <h1>Todo's </h1>
         {/* When passing the AddTodo component, addTodo is a prop that is used in the 
         AddTodo.js file when handling the submit */}
@@ -50,6 +52,8 @@ class Home extends Component {
         {/* When returning the Todos component, todos is a prop passed to the todos.js file
          to format and render the current todo list state */}
         <Todos todos={this.state.todos} deleteTodo={this.deleteTodo}/>
+        </div>
+        <RandomThing/>
       </div>
     );
   }

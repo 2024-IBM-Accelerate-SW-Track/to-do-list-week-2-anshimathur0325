@@ -20,16 +20,16 @@ const Todos = ({ todos, deleteTodo}) => {
             <CardContent  style={{marginTop:10}}>
             <ListItemButton component="a" href="#simple-list">
               <Checkbox style={{paddingLeft:0}} color="primary" onClick={() => deleteTodo(todo.id)}/>
-              <ListItemText primary={todo.content} secondary={ 
+              <ListItemText primary={<div><h1>{todo.content}</h1></div>} secondary={ 
               <div>
                       <p>
-                        Date: {todo.date}
+                        <strong>Date:</strong> {todo.date}
                       </p>
                       <p>
-                        Precondition: {todo.precondition}
+                        <strong>Precondition:</strong> {todo.precondition}
                       </p>
                       <p>
-                        Postcondition: {todo.postcondition}
+                        <strong>Postcondition:</strong> {todo.postcondition}
                       </p>
                 </div>}/>
                       

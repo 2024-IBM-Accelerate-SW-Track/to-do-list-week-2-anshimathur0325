@@ -62,6 +62,7 @@ class AddTodo extends Component {
           variant="outlined"
           onChange={this.handlePreChange}
           value={this.state.precondition}
+
         />
         <TextField
           label="Add New Content"
@@ -75,7 +76,10 @@ class AddTodo extends Component {
           variant="outlined"
           onChange={this.handlePostChange}
           value={this.state.postcondition}
+
         />
+        <br></br>
+        <br></br>
         <Button
           style={{ marginLeft: "10px" }}
           onClick={this.handleSubmit}
@@ -85,6 +89,8 @@ class AddTodo extends Component {
         >
           Add
         </Button>
+        <br></br>
+        <br></br>
       </div>
     );
   }

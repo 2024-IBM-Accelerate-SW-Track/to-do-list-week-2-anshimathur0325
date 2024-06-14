@@ -1,4 +1,10 @@
 .Home {
-  background-color: ghostwhite;
-  height: 100vh;
+  background-color: #9ed8db;
+  height: 75vh;
+  margin-top: 3em;
+}
+.Box {
+  background-color:		#e9fff9;
+  display: inline-block;
+  padding:4%;
 }
