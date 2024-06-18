@@ -10,7 +10,7 @@
 
 .left {
   left: 0;
-  background-color: #0f62fe;
+  background-color: #d64045;
 }
 
 .right {
@@ -27,7 +27,7 @@
 
 .name_title {
   font-size: 48px;
-  color: black;
+  color: #d64045;
   text-align: left;
   padding-bottom: 20px;
 }
@@ -37,6 +37,9 @@
 }
 
 .profile_image {
-  width: 500px;
-  height: auto;
+  width:65vh;
+  margin-top: 8vh;
+
+
+  border: 5px solid white;
 }
